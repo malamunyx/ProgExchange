@@ -26,7 +26,7 @@ In ``pe_trader``, a global variable is implemented to track the PID of the recen
 it waits until a ``MARKET SELL ...`` message from the exchange, where it will request a buy order
 to the exchange. ``pe_trader`` disconnects when ``qty >= 1000``. 
 
-To ensure it is fault tolerant, two measures were put in place:
+To ensure traders are fault tolerant, three measures were put in place:
 - If multiple messages stack, trader will only read until a semicolon delimiter.
 - SIGUSR1 must be received from ``ppid`` (exchange).
 - It will keep pinging SIGUSR1 back to the exchange after writing
