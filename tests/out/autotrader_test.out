@@ -1,0 +1,54 @@
+[PEX] Starting
+[PEX] Trading 2 products: GPU Router
+[PEX] Created FIFO /tmp/pe_exchange_0
+[PEX] Created FIFO /tmp/pe_trader_0
+[PEX] Connected to /tmp/pe_exchange_0
+[PEX] Connected to /tmp/pe_trader_0
+[PEX] Created FIFO /tmp/pe_exchange_1
+[PEX] Created FIFO /tmp/pe_trader_1
+[PEX] Connected to /tmp/pe_exchange_1
+[PEX] Connected to /tmp/pe_trader_1
+[PEX] [T0] Parsing command: <SELL 0 GPU 500 120>
+[PEX]	--ORDERBOOK--
+[PEX]	Product: GPU; Buy levels: 0; Sell levels: 1
+[PEX]		SELL 500 @ $120 (1 order)
+[PEX]	Product: Router; Buy levels: 0; Sell levels: 0
+[PEX]	--POSITIONS--
+[PEX]	Trader 0: GPU 0 ($0), Router 0 ($0)
+[PEX]	Trader 1: GPU 0 ($0), Router 0 ($0)
+[PEX] [T1] Parsing command: <BUY 0 GPU 500 120>
+[PEX] Match: Order 0 [T0], New Order 0 [T1], value: $60000, fee: $600.
+[PEX]	--ORDERBOOK--
+[PEX]	Product: GPU; Buy levels: 0; Sell levels: 0
+[PEX]	Product: Router; Buy levels: 0; Sell levels: 0
+[PEX]	--POSITIONS--
+[PEX]	Trader 0: GPU -500 ($60000), Router 0 ($0)
+[PEX]	Trader 1: GPU 500 ($-60600), Router 0 ($0)
+[PEX] [T0] Parsing command: <SELL 1 Router 700 200>
+[PEX]	--ORDERBOOK--
+[PEX]	Product: GPU; Buy levels: 0; Sell levels: 0
+[PEX]	Product: Router; Buy levels: 0; Sell levels: 1
+[PEX]		SELL 700 @ $200 (1 order)
+[PEX]	--POSITIONS--
+[PEX]	Trader 0: GPU -500 ($60000), Router 0 ($0)
+[PEX]	Trader 1: GPU 500 ($-60600), Router 0 ($0)
+[PEX] [T1] Parsing command: <BUY 1 Router 700 200>
+[PEX] Match: Order 1 [T0], New Order 1 [T1], value: $140000, fee: $1400.
+[PEX]	--ORDERBOOK--
+[PEX]	Product: GPU; Buy levels: 0; Sell levels: 0
+[PEX]	Product: Router; Buy levels: 0; Sell levels: 0
+[PEX]	--POSITIONS--
+[PEX]	Trader 0: GPU -500 ($60000), Router -700 ($140000)
+[PEX]	Trader 1: GPU 500 ($-60600), Router 700 ($-141400)
+[PEX] [T0] Parsing command: <SELL 2 GPU 1000 250>
+[PEX]	--ORDERBOOK--
+[PEX]	Product: GPU; Buy levels: 0; Sell levels: 1
+[PEX]		SELL 1000 @ $250 (1 order)
+[PEX]	Product: Router; Buy levels: 0; Sell levels: 0
+[PEX]	--POSITIONS--
+[PEX]	Trader 0: GPU -500 ($60000), Router -700 ($140000)
+[PEX]	Trader 1: GPU 500 ($-60600), Router 700 ($-141400)
+[PEX] Trader 0 disconnected
+[PEX] Trader 1 disconnected
+[PEX] Trading completed
+[PEX] Exchange fees collected: $2000
