@@ -1,4 +1,6 @@
-1. Describe how your exchange works.
+# ProgExchange (PEX)
+
+## 1. Describe how your exchange works.
 
 PEX exchange consists of two main modules, ``pe_exchange`` and ``orderbook``. The module ``pe_exchange`` is responsible 
 for dealing with input (trader message/requests) parsing and validation, whereas  ``orderbook`` is responsible with 
@@ -17,7 +19,7 @@ Inside ``product.h``, it uses ``pqueue_t``, a doubly-linked linked list based ri
 matching (BUY/SELL) and if exists a remainder, that will be enqueued into the product's ``pqueue_t``. During this 
 procedure, messages are sent to the relevant traders, updating the variables in their ``trader_t`` structs. 
 
-2. Describe your design decisions for the trader and how it's fault-tolerant.
+## 2. Describe your design decisions for the trader and how it's fault-tolerant.
 
 In ``pe_trader``, a global variable is implemented to track the PID of the recentmost signal received. Thus, 
 ``sigaction`` was used to enable this handling. After it receives a ``MARKET OPEN;`` message from the exchange,
@@ -35,7 +37,7 @@ Hence, ``read_msg(int fd, char *buf, int buflen, char delim)`` is implemented to
 and ``pause_until_response(int ppid)`` and ``signal_until_response(int ppid, int sig)`` are implemented to
 deal with rogue and missed signals.
 
-3. Describe your tests and how to run them.
+## 3. Describe your tests and how to run them.
 
 To run the tests, the binaries ``pe_exchange``, ``pe_trader``, and the tests must be compiled.
 Simply use the command ``make`` and ``make tests`` to generate the binaries. Afterwards, the
