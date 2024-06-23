@@ -52,3 +52,7 @@ command ``make run_tests`` is used to run the testcases.
 
 **E2E tests (Test Trader Binaries)**
 - ``test_autotrader``: Second trader to be run in conjunction with ``pe_trader``
+
+## Assignment Notice
+
+**Completed as part of COMP2017 Assignment 3 in 2023**
