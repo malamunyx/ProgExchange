@@ -43,11 +43,12 @@ To run the tests, the binaries ``pe_exchange``, ``pe_trader``, and the tests mus
 Simply use the command ``make`` and ``make tests`` to generate the binaries. Afterwards, the
 command ``make run_tests`` is used to run the testcases.
 
-Unit tests (Uses CMocka):
+**Unit tests (Uses CMocka):**
 - ``orderbook_test.c``: tests ``orderbook`` module
 - ``product_test.c``: tests ``product`` module
 - ``rbuf_test.c``: tests ``rbuf`` module
 - ``request_test.c``: tests ``request`` module
 - ``trader_test.c``: tests ``trader`` module
-E2E tests (Test Trader Binaries)
+
+**E2E tests (Test Trader Binaries)**
 - ``test_autotrader``: Second trader to be run in conjunction with ``pe_trader``
